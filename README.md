@@ -14,6 +14,12 @@ Copy/paste this URL into your browser when you connect for the first time,
         http://bbc25d1f331f:8888/?token=2ad39d07c47f3d98a65d866456b741f8ff569cce9a288541&token=2ad39d07c47f3d98a65d866456b741f8ff569cce9a288541
 ```
 Replace the host with our server chiltepin.health.unm.edu 
+1. The token and URL can also be obtained by the command
+```docker exec CONTAINERID exec jupyter notebook list
+```
+where CONTAINERID is obtained from
+```docker ps
+```
 1. Once there [navigate](http://chiltepin.health.unm.edu:8888/tree/work/nb) to the nb directory and open the GTEx notebook.  From here we can run, change, explore in any manner.  
 
 ---
