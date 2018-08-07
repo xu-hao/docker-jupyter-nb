@@ -3,8 +3,8 @@
 1. Clone this repository
 1. Make sure to have your IRODS authentication info handy
 1. Run the script ```./irods_start.sh <irods_user> <irods_password>```
-1. [Navigate](http://chiltepin.health.unm.edu:8888/tree/notebooks) and open
-#the GTEx notebook.  From here we can run, analyze, explore the GTEx content using the notebook. 
+1. [Navigate](http://chiltepin.health.unm.edu:8888/tree/notebooks) and open 
+the GTEx notebook.  From here we can run, analyze, explore the GTEx content using the notebook. 
 
 # Jupyter Notebooks for UNM Data Commons Project
 ## Steps to run container
