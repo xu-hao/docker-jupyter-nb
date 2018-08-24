@@ -1,4 +1,4 @@
-FROM heliumdatacommons/datacommons-base
+FROM heliumdatacommons/datacommons-jupyter
 
 ARG INDOCKER_DIR_1="/renci/irods/gtex/Annotations"
 ARG INDOCKER_DIR="/home/dockeruser/venv"
