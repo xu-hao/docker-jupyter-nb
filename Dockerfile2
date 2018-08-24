@@ -1,0 +1,22 @@
+FROM heliumdatacommons/datacommons-base
+
+ARG INDOCKER_DIR_1="/renci/irods/gtex/Annotations"
+ARG INDOCKER_DIR="/home/dockeruser/venv"
+ARG CONTAINER_NAME="dc_jupyter"
+
+# The paths where the data files reside
+ENV GTEX_DATA_PATH_1 "${INDOCKER_DIR_1}/"
+ENV GTEX_DATA_PATH_2 "${INDOCKER_DIR}/gtex/"
+
+# Add additional setup to Irods container in order to run UNM notebook
+RUN echo 'Creating directories and installing dependencies...'
+RUN mkdir "${INDOCKER_DIR}/notebooks"
+RUN mkdir "${INDOCKER_DIR}/gtex"
+RUN /home/dockeruser/venv/bin/pip3 install --upgrade pip
+RUN /home/dockeruser/venv/bin/pip3 install scipy matplotlib
+
+# Copy into container missing GTEx content and notebook
+RUN echo 'Copying required analysis files and UNM Jupyter notebook'
+COPY GTEx/data/biomart_ENSG2NCBI.tsv "$INDOCKER_DIR/gtex/"
+COPY GTEx/data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_tpm.gct.gz "$INDOCKER_DIR/gtex/"
+COPY gtex_rnaseq_prep.ipynb "$INDOCKER_DIR/notebooks/"
