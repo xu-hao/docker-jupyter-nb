@@ -2,7 +2,14 @@ FROM heliumdatacommons/datacommons-jupyter
 
 ARG INDOCKER_DIR_1="/renci/irods/gtex/Annotations"
 ARG INDOCKER_DIR="/home/dockeruser/venv"
-ARG CONTAINER_NAME="dc_jupyter"
+ARG IRODS_ZONE_NAME="commonssharetestZone"
+
+ENV CHRONOS https://stars-app.renci.org/chronos/
+ENV IRODS_PORT 1247
+ENV IRODS_HOST "test.commonsshare.org"
+ENV IRODS_HOME "/$IRODS_ZONE_NAME"
+ENV IRODS_CWD "/$IRODS_ZONE_NAME"
+ENV IRODS_ZONE_NAME $IRODS_ZONE_NAME
 
 # The paths where the data files reside
 ENV GTEX_DATA_PATH_1 "${INDOCKER_DIR_1}/"
