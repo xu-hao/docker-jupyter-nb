@@ -13,4 +13,3 @@ docker run --privileged -d --name dc_jupyter           \
        heliumdatacommons/datacommons-jupyter2          \
        jupyter
 ```
-
