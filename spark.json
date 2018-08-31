@@ -1,0 +1,74 @@
+{
+    "id": "spark-livy",
+    "containers": [
+	{
+	    "id": "sparkmagic",
+	    "type": "service",
+	    "network_mode": "bridge",
+	    "image": "heliumdatacommons/sparkmagic",
+	    "resources": {
+		"cpus": 1,
+		"mem": 2048
+	    },
+	    "is_privileged": true,
+	    "ports": [
+		{"container_port": 8888 }
+	    ],
+	    "args": [
+		"--NotebookApp.token=\"\""
+	    ],
+	    "env": {
+		"LIVY_HOST": "@livy"
+	    },
+	    "dependencies": [ "livy" ]
+	},
+        {
+            "id": "livy",
+            "type": "service",
+            "image": "heliumdatacommons/livy",
+            "resources": {
+                "cpus": 1,
+                "mem": 4096
+            },
+            "network_mode": "container",
+            "ports": [
+                { "container_port": 8998 }
+            ],
+            "args": [
+                "spark://@spark-master:7077"
+            ],
+            "dependencies": [ "spark-master" ]
+        },
+        {
+            "id": "spark-master",
+            "type": "service",
+            "image": "heliumdatacommons/spark-master",
+            "resources": {
+                "cpus": 1,
+                "mem": 1024
+            },
+            "network_mode": "container",
+            "ports": [
+                { "container_port": 8080 },
+                { "container_port": 7077 }
+            ]
+        },
+        {
+            "id": "spark-worker",
+            "type": "service",
+            "image": "heliumdatacommons/helium-spark-r-worker",
+            "instances": 1,
+            "resources": {
+                "cpus": 4,
+                "mem": 4096
+            },
+            "network_mode": "container",
+            "args": [
+                "@spark-master:7077"
+            ],
+            "env": {
+                "PYSPARK_PYTHON": "/usr/bin/python"
+            }
+        }
+    ]
+}
