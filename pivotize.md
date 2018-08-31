@@ -3,5 +3,5 @@
 open terminal from jupyter notebook type dropdown menu
 
 ```
-pip install scipy matplotlib irods-pythonclient pandas
+pip install scipy matplotlib python-irodsclient pandas
 ```
