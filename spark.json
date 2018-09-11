@@ -42,7 +42,7 @@
         {
             "id": "spark-master",
             "type": "service",
-            "image": "heliumdatacommons/spark-master",
+            "image": "zooh/spark-master",
             "resources": {
                 "cpus": 1,
                 "mem": 1024
@@ -56,7 +56,7 @@
         {
             "id": "spark-worker",
             "type": "service",
-            "image": "heliumdatacommons/helium-spark-r-worker",
+            "image": "zooh/helium-spark-r-worker",
             "instances": 1,
             "resources": {
                 "cpus": 4,
