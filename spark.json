@@ -25,7 +25,7 @@
         {
             "id": "livy",
             "type": "service",
-            "image": "heliumdatacommons/livy",
+            "image": "zooh/livy",
             "resources": {
                 "cpus": 1,
                 "mem": 4096
