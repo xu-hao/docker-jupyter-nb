@@ -1,7 +1,16 @@
 ### pivot
 
-`spark.json`
+```
+curl -X POST -d "@spark.json" <pivot>/appliance
+```
 
+```
+curl -X GET <pivot>/appliance/spark-livy
+```
+
+```
+curl -X DELETE <pivot>/appliance/spark-livy
+```
 ### preprocessing
 
 upload files:
