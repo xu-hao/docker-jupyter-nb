@@ -1,9 +1,5 @@
 ### preprocessing
-open terminal from jupyter notebook type dropdown menu
 
-```
-pip install scipy matplotlib python-irodsclient pandas
-```
 upload files:
 `gtex_rnaseq_prep.ipynb`
 `GTEx_v7_Annotations_SubjectPhenotypesDS.txt`
@@ -12,6 +8,7 @@ upload files:
 `biomart_ENSG2NCBI.tsv`
 
 ### similarity
+
 upload files:
 `livy.py`
 `exfiles_similarity.py.ipynb`
