@@ -5,7 +5,7 @@
 	    "id": "sparkmagic",
 	    "type": "service",
 	    "network_mode": "bridge",
-	    "image": "heliumdatacommons/sparkmagic",
+	    "image": "zooh/sparkmagic",
 	    "resources": {
 		"cpus": 1,
 		"mem": 2048
