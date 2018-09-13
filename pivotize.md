@@ -17,7 +17,9 @@ upload files:
 upload files:
 
 `livy.py`
+
 `exfiles_similarity.py.ipynb`
+
 `gtex_rnaseq_prep_profiles.tsv`
 
 To run `exfiles_similarity.py.ipynb`, copy livy addr into notebook
