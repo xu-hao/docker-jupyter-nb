@@ -31,3 +31,9 @@ def execStatement(host, session_url, code, files=None):
         r = requests.get(statement_url, headers=headers)
     return r
 
+def getHostUrl(pivot):
+    r = requests.get(pivot + "/appliance/spark-livy")
+    for container in r.json()["containers"]:
+        if container["id"] == "livy":
+            epoint = container["endpoints"][0]
+            return "http://" + epoint["host"] + ":" + str(epoint["host_port"])
