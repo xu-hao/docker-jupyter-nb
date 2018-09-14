@@ -17,6 +17,7 @@ ENV GTEX_DATA_PATH_2 "${INDOCKER_DIR}/gtex/"
 
 # Add additional setup to Irods container in order to run UNM notebook
 RUN echo 'Creating directories and installing dependencies...'
+
 RUN pip install scipy matplotlib python-irodsclient
 
 # Copy into container missing GTEx content and notebook
