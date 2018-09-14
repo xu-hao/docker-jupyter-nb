@@ -19,7 +19,7 @@ ENV GTEX_DATA_PATH_2 "${INDOCKER_DIR}/gtex/"
 RUN echo 'Creating directories and installing dependencies...'
 RUN mkdir "${INDOCKER_DIR}/notebooks"
 RUN mkdir "${INDOCKER_DIR}/gtex"
-RUN apt-update && apt-install -y scipy matplotlib
+RUN pip install scipy matplotlib python-irodsclient pandas
 
 # Copy into container missing GTEx content and notebook
 RUN echo 'Copying required analysis files and UNM Jupyter notebook'
