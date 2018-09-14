@@ -1,4 +1,4 @@
-FROM heliumdatacommons/datacommons-jupyter
+FROM heliumdatacommons/sparkmagic
 
 ARG INDOCKER_DIR_1="/renci/irods/gtex/Annotations"
 ARG INDOCKER_DIR="/home/dockeruser/venv"
@@ -27,3 +27,5 @@ RUN echo 'Copying required analysis files and UNM Jupyter notebook'
 COPY GTEx/data/biomart_ENSG2NCBI.tsv "$INDOCKER_DIR/gtex/"
 COPY GTEx/data/GTEx_Analysis_2016-01-15_v7_RNASeQCv1.1.8_gene_tpm.gct.gz "$INDOCKER_DIR/gtex/"
 COPY gtex_rnaseq_prep.ipynb "$INDOCKER_DIR/notebooks/"
+COPY gtex_rnaseq_prep_profiles.tsv "$INDOCKER_DIR/gtex/"
+COPY exfile_similarity.py.ipynb "$INDOCKER_DIR/notebooks/"
