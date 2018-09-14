@@ -35,5 +35,5 @@ upload files:
 
 `gtex_rnaseq_prep_profiles.tsv`
 
-To run `exfiles_similarity.py.ipynb`, copy pivot addr into notebook
+To run `exfiles_similarity.py.ipynb` on pivot, set `pivot_url` in notebook
 
