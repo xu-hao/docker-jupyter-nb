@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-### preprocessing
-
-=======
 ### pivot
 
 ```
@@ -17,7 +13,6 @@ curl -X DELETE <pivot>/appliance/spark-livy
 ```
 ### preprocessing
 
->>>>>>> 0ba9899e75cfbd8448359ebe2577d8df17e822da
 upload files:
 
 `gtex_rnaseq_prep.ipynb`
