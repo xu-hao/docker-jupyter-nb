@@ -1,4 +1,4 @@
-FROM heliumdatacommons/sparkmagic
+FROM zooh/sparkmagic
 
 ARG INDOCKER_DIR_1="/renci/irods/gtex/Annotations"
 ARG INDOCKER_DIR="/home/dockeruser/venv"
