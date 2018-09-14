@@ -25,4 +25,4 @@ RUN echo 'Copying required analysis files and UNM Jupyter notebook'
 COPY gtex_rnaseq_prep.ipynb "$INDOCKER_DIR/notebooks/"
 
 COPY livy.py "/jupyter/"
-COPY exfile_similarity.py.ipynb "/jupyter/"
+COPY exfiles_similarity.py.ipynb "/jupyter/"
