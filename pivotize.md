@@ -1,15 +1,15 @@
 ### pivot
 
 ```
-curl -X POST -d "@spark.json" <pivot>/appliance
+curl -X POST -d "@spark2.json" <pivot>/appliance
 ```
 
 ```
-curl -X GET <pivot>/appliance/spark-livy
+curl -X GET <pivot>/appliance/spark-livy2
 ```
 
 ```
-curl -X DELETE <pivot>/appliance/spark-livy
+curl -X DELETE <pivot>/appliance/spark-livy2
 ```
 ### preprocessing
 
